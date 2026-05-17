@@ -75,7 +75,7 @@
 
         <div class="card-wrapper hidden" id="cardWrapper">
             <div id="birthday-card">
-                <img src="https://github.com/nimoslk/Happy-Birthday-Serah/blob/7064f4947cf46e1c0019f7ee559cf65226ec01bc/HH.png" alt="Serah" class="profile-pic">
+                <img src="https://raw.githubusercontent.com/nimoslk/Happy-Birthday-Serah/7064f4947cf46e1c0019f7ee559cf65226ec01bc/HH.png" alt="Serah" class="profile-pic">
                 <h2 class="card-h2">Happy 21st Birthday</h2>
                 <span class="name">Serah!</span>
                 <p class="wish">"Forget the mistakes of the past and learn from them. Just believe in yourself and keep shining, girl!"</p>
@@ -91,7 +91,6 @@
         const song = document.getElementById('birthday-song');
 
         function startExperience() {
-            // පළමු ක්ලික් කිරීමේදී සින්දුව ප්ලේ කර සද්දය නැති කරයි (Unlock Autoplay)
             song.muted = true;
             song.play().then(() => {
                 console.log("Audio unlocked successfully");
@@ -105,7 +104,6 @@
                 document.getElementById('overlay').style.display = 'none';
                 document.getElementById('main').style.display = 'flex';
                 
-                // ඉටිපන්දම් කේතය (කිසිදු වෙනසක් කර නොමැත)
                 const group = document.getElementById('candleGroup');
                 for(let i=0; i<20; i++) {
                     let c = document.createElement('div');
@@ -152,7 +150,6 @@
             if (blowCount >= 3) {
                 isReadyToBlow = false;
                 
-                // ඉටිපන්දම් නිවුණු පසු සින්දුව Unmute කර ශබ්දය වැඩි කරයි
                 song.muted = false;
                 song.volume = 1.0;
                 song.currentTime = 0; 
